@@ -34,7 +34,6 @@ const TrafficLight = (props) => {
     }
 
     return (
-
         <div className="container">
             <div className="semaphore">
 
@@ -45,8 +44,5 @@ const TrafficLight = (props) => {
         </div>
     )
 }
-
-//onClick={() => cambiarLuz(state.redLight)}
-
 
 ReactDOM.render(<TrafficLight />, document.querySelector('#root'));
