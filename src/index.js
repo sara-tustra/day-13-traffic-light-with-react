@@ -1,17 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './style.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const TrafficLight = (props) => {
+    const [state, setState] = useState({
+        redLight: "redLight",
+        yellowLight: "yellowLight",
+        greenLight: "greenLight"
+    })
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    const redOn = () => {
+        setState({
+            redLight: "redLightOn",
+            yellowLight: "yellowLight",
+            greenLight: "greenLight"
+        })
+    }
+
+    const yellowOn = () => {
+        setState({
+            redLight: "redLight",
+            yellowLight: "yellowLightOn",
+            greenLight: "greenLight"
+        })
+    }
+
+    const greenOn = () => {
+        setState({
+            redLight: "redLight",
+            yellowLight: "yellowLight",
+            greenLight: "greenLightOn"
+        })
+    }
+
+    return (
+
+        <div className="container">
+            <div className="semaphore">
+
+                <div className={state.redLight} onClick={redOn}></div>
+                <div className={state.yellowLight} onClick={yellowOn}></div>
+                <div className={state.greenLight} onClick={greenOn}></div>
+            </div>
+        </div>
+    )
+}
+
+//onClick={() => cambiarLuz(state.redLight)}
+
+
+ReactDOM.render(<TrafficLight />, document.querySelector('#root'));

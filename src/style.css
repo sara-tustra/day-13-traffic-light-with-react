@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    height: 800px;
+    width: 100%;
+}
+
+
+.semaphore {
+    position: relative;
+    background-color: black;
+    height: 250px;
+    width: 120px;
+    border-radius: 10px;
+    
+}
+
+.semaphore::before {
+    position: absolute;
+    content: '';
+    left: 55px;
+    top: -100px;
+    background-color: black;
+    height: 100px;
+    width: 10px;
+}
+
+.redLight {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 10px auto;
+    
+}
+
+.yellowLight {
+    width: 70px;
+    height: 70px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: 10px auto;
+    
+}
+
+.greenLight {
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.redLightOn {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 10px auto;
+    box-shadow: 0 0 50px red,
+    0 0 100px red,
+    0 0 150px red,
+    0 0 200px red,
+    0 0 250px red;
+
+}
+
+.yellowLightOn {
+    width: 70px;
+    height: 70px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: 10px auto;
+    box-shadow: 0 0 50px yellow,
+    0 0 100px yellow,
+    0 0 150px yellow,
+    0 0 200px yellow,
+    0 0 250px yellow;
+   
+}
+
+.greenLightOn {
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 10px auto;
+    box-shadow: 0 0 50px green,
+    0 0 100px green,
+    0 0 150px green,
+    0 0 200px green,
+    0 0 250px green;
+    
+}
